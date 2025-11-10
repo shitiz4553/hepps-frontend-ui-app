@@ -15,3 +15,8 @@ export { default as CreateHangoutScreen } from './createHangout';
 export { default as HangoutInfoScreen } from './hangoutInfo';
 export { default as AddExpenseScreen } from './addExpense';
 export { default as HangoutSettingsScreen } from './hangoutSettings';
+export { default as FriendsScreen } from './friends';
+export { default as VehiclesScreen } from './vehicles';
+export { default as PlacesScreen } from './places';
+export { default as AddVehicleScreen } from './addVehicle';
+export { default as AppSettingsScreen } from './appSettings';

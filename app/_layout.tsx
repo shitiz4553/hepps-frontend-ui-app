@@ -44,6 +44,11 @@ export default function RootLayout() {
         <Stack.Screen name="hangoutInfo" />
         <Stack.Screen name="addExpense" />
         <Stack.Screen name="hangoutSettings" />
+        <Stack.Screen name="friends" />
+        <Stack.Screen name="vehicles" />
+        <Stack.Screen name="places" />
+        <Stack.Screen name="addVehicle" />
+        <Stack.Screen name="appSettings" />
       </Stack>
       <StatusBar style="dark" />
     </>
