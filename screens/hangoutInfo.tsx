@@ -1,18 +1,18 @@
+import { ActivityItem, ExpenseItem } from '@/components';
+import { colors } from '@/constants/colors';
+import { activitiesData, balancesData, expensesData } from '@/data/expenses';
+import { hangoutsData } from '@/data/hangouts';
+import { useLocalSearchParams, useRouter } from 'expo-router';
+import { Add, ArrowLeft, Setting2 } from 'iconsax-react-native';
 import React, { useState } from 'react';
 import {
-  View,
-  Text,
-  StyleSheet,
   ScrollView,
-  SafeAreaView,
+  StyleSheet,
+  Text,
   TouchableOpacity,
+  View,
 } from 'react-native';
-import { ArrowLeft, Setting2, Add } from 'iconsax-react-native';
-import { useRouter, useLocalSearchParams } from 'expo-router';
-import { colors } from '@/constants/colors';
-import { hangoutsData } from '@/data/hangouts';
-import { expensesData, balancesData, activitiesData } from '@/data/expenses';
-import { ExpenseItem, ActivityItem } from '@/components';
+import { SafeAreaView } from 'react-native-safe-area-context';
 
 type TabType = 'balances' | 'expenses' | 'activity';
 

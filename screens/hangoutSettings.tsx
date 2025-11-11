@@ -1,21 +1,21 @@
+import { Dropdown } from '@/components';
+import { colors } from '@/constants/colors';
+import { companionsData } from '@/data/companions';
+import { hangoutsData } from '@/data/hangouts';
+import { useLocalSearchParams, useRouter } from 'expo-router';
+import { ArrowLeft, CloseCircle, Edit2, LogoutCurve, People, SearchNormal1, Star1, TickCircle, UserAdd } from 'iconsax-react-native';
 import React, { useState } from 'react';
 import {
-  View,
-  Text,
-  StyleSheet,
-  ScrollView,
-  SafeAreaView,
-  TouchableOpacity,
-  Switch,
   Modal,
+  ScrollView,
+  StyleSheet,
+  Switch,
+  Text,
   TextInput,
+  TouchableOpacity,
+  View,
 } from 'react-native';
-import { ArrowLeft, Edit2, People, UserAdd, Star1, LogoutCurve, CloseCircle, TickCircle, SearchNormal1 } from 'iconsax-react-native';
-import { useRouter, useLocalSearchParams } from 'expo-router';
-import { colors } from '@/constants/colors';
-import { hangoutsData } from '@/data/hangouts';
-import { companionsData } from '@/data/companions';
-import { Dropdown } from '@/components';
+import { SafeAreaView } from 'react-native-safe-area-context';
 
 export default function HangoutSettingsScreen() {
   const router = useRouter();
@@ -38,7 +38,7 @@ export default function HangoutSettingsScreen() {
   // Initialize selected companions when modal opens
   React.useEffect(() => {
     if (showCompanionsModal && hangout) {
-      setSelectedCompanions(hangout.companions || []);
+      setSelectedCompanions(hangout.companions.map(companion => companion.id) || []);
     }
   }, [showCompanionsModal, hangout]);
 
@@ -100,7 +100,11 @@ export default function HangoutSettingsScreen() {
           <Text style={styles.sectionTitle}>Hangout Preferences</Text>
           
           {/* Simplify Group Debts Toggle */}
-          <View style={styles.settingItem}>
+          <View style={[styles.settingItem,{
+            flexDirection: 'row',
+            alignItems: 'center',
+            justifyContent: 'space-between',
+          }]}>
             <View style={styles.settingInfo}>
               <Text style={styles.settingLabel}>Simplify group debts</Text>
               <Text style={styles.settingDescription}>

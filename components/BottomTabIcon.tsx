@@ -1,12 +1,12 @@
-import React, { useEffect } from "react";
-import { View, StyleSheet } from "react-native";
-import { Home2, Location, User } from "iconsax-react-native";
 import { colors } from "@/constants/colors";
+import { Home2, Location, User } from "iconsax-react-native";
+import React, { useEffect } from "react";
+import { StyleSheet } from "react-native";
 import Animated, {
-  useSharedValue,
   useAnimatedStyle,
-  withSpring,
+  useSharedValue,
   withSequence,
+  withSpring,
 } from "react-native-reanimated";
 
 interface BottomTabIconProps {
@@ -67,4 +67,6 @@ const styles = StyleSheet.create({
     alignItems: "center",
   },
 });
+
+
 

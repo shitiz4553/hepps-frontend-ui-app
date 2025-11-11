@@ -4,7 +4,8 @@ import { hangoutsData } from '@/data/hangouts';
 import { useRouter } from 'expo-router';
 import { Add, Car, Star1, User } from 'iconsax-react-native';
 import React from 'react';
-import { SafeAreaView, ScrollView, StyleSheet, Text, TouchableOpacity, View } from 'react-native';
+import { ScrollView, StyleSheet, Text, TouchableOpacity, View } from 'react-native';
+import { SafeAreaView } from 'react-native-safe-area-context';
 
 export default function HangoutScreen() {
   const router = useRouter();

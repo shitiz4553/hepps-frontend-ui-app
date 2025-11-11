@@ -4,11 +4,11 @@ import {
   Text,
   StyleSheet,
   ScrollView,
-  SafeAreaView,
   TouchableOpacity,
   TextInput,
   Modal,
 } from 'react-native';
+import { SafeAreaView } from 'react-native-safe-area-context';
 import { ArrowLeft, Calendar, User, TickCircle } from 'iconsax-react-native';
 import { useRouter, useLocalSearchParams } from 'expo-router';
 import { Calendar as RNCalendar } from 'react-native-calendars';

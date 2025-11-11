@@ -13,13 +13,13 @@ import {
 } from 'iconsax-react-native';
 import React, { useState } from 'react';
 import {
-    SafeAreaView,
     ScrollView,
     StyleSheet,
     Text,
     TouchableOpacity,
     View
 } from 'react-native';
+import { SafeAreaView } from 'react-native-safe-area-context';
 
 interface ServiceCardProps {
   title: string;

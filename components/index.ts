@@ -13,6 +13,7 @@ export { default as ExpenseItem } from './ExpenseItem';
 export { default as ActivityItem } from './ActivityItem';
 export { default as SettingsMenuItem } from './SettingsMenuItem';
 export { default as VehicleCard } from './VehicleCard';
+export { default as BottomSheet } from './BottomSheet';
 export { default as FriendCard } from './FriendCard';
 export { default as ActionCard } from './ActionCard';
 export { default as AnimatedTabIcon } from './AnimatedTabIcon';
